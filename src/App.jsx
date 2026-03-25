@@ -1,17 +1,12 @@
 import HeroSection from "./components/HeroSection";
-import ImageContainer from "./components/ImageContainer";
-import TextBlock from "./components/TextBlock";
+import MainSection from "./components/MainSection";
 
 function App() {
   return (
     <div className="text-base leading-base tracking-base text-grey-500 flex flex-col gap-16">
       <HeroSection />
 
-      <main>
-        <ImageContainer />
-        <TextBlock />
-        <ImageContainer />
-      </main>
+      <MainSection />
     </div>
   )
 }
