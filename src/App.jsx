@@ -1,5 +1,6 @@
 import HeroSection from "./components/HeroSection";
 import MainSection from "./components/MainSection";
+import Menu from "./components/Menu";
 
 function App() {
   return (
@@ -7,6 +8,8 @@ function App() {
       <HeroSection />
 
       <MainSection />
+
+      <Menu />
     </div>
   )
 }
