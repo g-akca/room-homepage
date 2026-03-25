@@ -1,16 +1,16 @@
 import arrowIcon from "/images/icon-arrow.svg";
 
-function HeroContent() {
+function HeroContent({ getCurrentDesign }) {
+  const design = getCurrentDesign();
+
   return (
     <section className="self-center px-8 tablet:px-16 desktop:px-25 flex flex-col gap-8 tablet:gap-6 desktop:grow">
       <div className="flex flex-col gap-4">
         <h1 className="text-black text-[40px] tablet:text-[48px] font-semibold leading-[100%] tablet:leading-[90%] tracking-[-2px]">
-          Discover innovative ways to decorate
+          {design.title}
         </h1>
         <p className="font-medium">
-          We provide unmatched quality, comfort, and style for property owners across the country. 
-          Our experts combine form and function in bringing your vision to life. Create a room in 
-          your own style with our collection and make your property a reflection of you and what you love.
+          {design.subtext}
         </p>
       </div>
 
