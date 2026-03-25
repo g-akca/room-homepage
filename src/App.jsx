@@ -8,7 +8,7 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="text-base leading-base tracking-base text-grey-500 flex flex-col gap-16 desktop:gap-0">
+    <div className="text-base leading-base tracking-base text-grey-500 min-h-screen flex flex-col gap-16 desktop:gap-0">
       <HeroSection openMenu={() => setIsMenuOpen(true)} />
 
       <MainSection />
