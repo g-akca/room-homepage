@@ -3,6 +3,8 @@ import logo from "/images/logo.svg";
 import leftIcon from "/images/icon-angle-left.svg";
 import rightIcon from "/images/icon-angle-right.svg";
 
+import NavList from "./NavList";
+
 function Header({ openMenu, getCurrentDesign, setPrevIndex, setNextIndex }) {
   const isTablet = window.innerWidth >= 768;
   const design = getCurrentDesign();
@@ -17,20 +19,15 @@ function Header({ openMenu, getCurrentDesign, setPrevIndex, setNextIndex }) {
         backgroundImage: `url(/room-homepage/images/${isTablet ? design.desktopImgUrl : design.mobileImgUrl})`
       }}
     >
-      <nav>
+      <div>
         <div className="grid grid-cols-3 desktop:flex desktop:gap-14">
           <button type="button" onClick={openMenu} className="cursor-pointer desktop:hidden">
             <img src={menuIcon} alt="Menu icon" />
           </button>
           
           <img src={logo} alt="Room logo" className="justify-self-center" />
-
-          <ul className="hidden desktop:flex lowercase text-white font-semibold leading-[100%] tracking-[-0.7px] gap-8">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+          
+          <NavList className="hidden desktop:flex text-white" />
         </div>
 
         <div className="absolute bottom-0 right-0 flex desktop:-right-40">
@@ -41,7 +38,7 @@ function Header({ openMenu, getCurrentDesign, setPrevIndex, setNextIndex }) {
             <img src={rightIcon} alt="Right arrow" className="cursor-pointer w-2.5 tablet:w-3.5" />
           </button>
         </div>
-      </nav>
+      </div>
     </header>
   )
 }

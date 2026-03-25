@@ -1,5 +1,7 @@
 import closeIcon from "/images/icon-close.svg";
 
+import NavList from "./NavList";
+
 function Menu({ closeMenu }) {
   return (
     <div className="fixed inset-0 z-50 desktop:hidden">
@@ -10,14 +12,7 @@ function Menu({ closeMenu }) {
           <img src={closeIcon} alt="Close menu" />
         </button>
 
-        <nav>
-          <ul className="lowercase text-black font-semibold leading-[100%] tracking-[-0.7px] flex gap-8">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
+        <NavList className="flex text-black" />
       </div>
     </div>
   )
