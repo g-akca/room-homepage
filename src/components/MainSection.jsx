@@ -6,7 +6,7 @@ import lightImg from "/images/image-about-light.jpg";
 
 function MainSection() {
   return (
-    <main>
+    <main className="flex flex-col gap-12">
       <ImageContainer src={darkImg} />
       <TextBlock />
       <ImageContainer src={lightImg} />
