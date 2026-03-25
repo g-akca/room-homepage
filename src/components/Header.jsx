@@ -8,7 +8,7 @@ function Header({ openMenu }) {
     <header className="relative h-90 px-6 py-12 bg-[url('/images/mobile-image-hero-1.jpg')] bg-cover bg-center">
       <nav>
         <div className="grid grid-cols-3">
-          <button type="button" onClick={openMenu}>
+          <button type="button" onClick={openMenu} className="cursor-pointer">
             <img src={menuIcon} alt="Menu icon" />
           </button>
           

@@ -13,7 +13,7 @@ function App() {
 
       <MainSection />
 
-      {isMenuOpen && <Menu />}
+      {isMenuOpen && <Menu closeMenu={() => setIsMenuOpen(false)} />}
     </div>
   )
 }
