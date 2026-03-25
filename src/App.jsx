@@ -13,7 +13,9 @@ function App() {
 
       <MainSection />
 
-      {isMenuOpen && <Menu closeMenu={() => setIsMenuOpen(false)} />}
+      {isMenuOpen && 
+        <Menu closeMenu={() => setIsMenuOpen(false)} />
+      }
     </div>
   )
 }
