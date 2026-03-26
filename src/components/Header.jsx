@@ -1,3 +1,5 @@
+import { motion, AnimatePresence } from "framer-motion";
+
 import menuIcon from "/images/icon-hamburger.svg";
 import logo from "/images/logo.svg";
 import leftIcon from "/images/icon-angle-left.svg";
@@ -10,16 +12,20 @@ function Header({ openMenu, getCurrentDesign, setPrevIndex, setNextIndex }) {
   const design = getCurrentDesign();
 
   return (
-    <header 
-      className={`
-        relative h-90 tablet:h-100 desktop:h-auto px-6 tablet:px-16 py-12 desktop:p-16  
-        bg-cover bg-center desktop:w-210 desktop:shrink-0`
-      }
-      style={{
-        backgroundImage: `url(/room-homepage/images/${isTablet ? design.desktopImgUrl : design.mobileImgUrl})`
-      }}
-    >
-      <div>
+    <AnimatePresence mode="wait" initial={false}>
+      <motion.header
+        key={design.desktopImgUrl}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.8 }}
+        transition={{ duration: 0.6 }}
+        className="relative h-90 tablet:h-100 desktop:h-auto px-6 tablet:px-16 py-12 desktop:p-16 bg-cover bg-center desktop:w-210 desktop:shrink-0"
+        style={{
+          backgroundImage: `url(/room-homepage/images/${
+            isTablet ? design.desktopImgUrl : design.mobileImgUrl
+          })`,
+        }}
+      >
         <div className="grid grid-cols-3 desktop:flex desktop:gap-14">
           <button type="button" onClick={openMenu} className="cursor-pointer desktop:hidden">
             <img src={menuIcon} alt="Menu icon" />
@@ -38,8 +44,8 @@ function Header({ openMenu, getCurrentDesign, setPrevIndex, setNextIndex }) {
             <img src={rightIcon} alt="Right arrow" className="w-2.5 tablet:w-3.5" />
           </button>
         </div>
-      </div>
-    </header>
+      </motion.header>
+    </AnimatePresence>
   )
 }
 
