@@ -27,15 +27,15 @@ function Header({ openMenu, getCurrentDesign, setPrevIndex, setNextIndex }) {
           
           <img src={logo} alt="Room logo" className="justify-self-center" />
           
-          <NavList className="hidden desktop:flex text-white" />
+          <NavList className="hidden desktop:flex text-white" itemClassName="relative after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:-bottom-2 after:w-0 after:h-0.5 after:bg-white after:transition-all hover:after:w-4" />
         </div>
 
         <div className="absolute bottom-0 right-0 flex desktop:-right-40">
-          <button type="button" onClick={setPrevIndex} className="bg-black w-14 h-14 tablet:w-20 tablet:h-20 flex justify-center items-center">
-            <img src={leftIcon} alt="Left arrow" className="cursor-pointer w-2.5 tablet:w-3.5" />
+          <button type="button" onClick={setPrevIndex} className="bg-black w-14 h-14 tablet:w-20 tablet:h-20 flex justify-center items-center cursor-pointer hover:bg-grey-800 transition-all">
+            <img src={leftIcon} alt="Left arrow" className="w-2.5 tablet:w-3.5" />
           </button>
-          <button type="button" onClick={setNextIndex} className="bg-black w-14 h-14 tablet:w-20 tablet:h-20 flex justify-center items-center">
-            <img src={rightIcon} alt="Right arrow" className="cursor-pointer w-2.5 tablet:w-3.5" />
+          <button type="button" onClick={setNextIndex} className="bg-black w-14 h-14 tablet:w-20 tablet:h-20 flex justify-center items-center cursor-pointer hover:bg-grey-800 transition-all">
+            <img src={rightIcon} alt="Right arrow" className="w-2.5 tablet:w-3.5" />
           </button>
         </div>
       </div>

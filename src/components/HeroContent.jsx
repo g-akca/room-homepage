@@ -1,4 +1,4 @@
-import arrowIcon from "/images/icon-arrow.svg";
+import ArrowIcon from "./ArrowIcon";
 
 function HeroContent({ getCurrentDesign }) {
   const design = getCurrentDesign();
@@ -14,9 +14,9 @@ function HeroContent({ getCurrentDesign }) {
         </p>
       </div>
 
-      <button type="button" className="flex justify-between items-center tablet:justify-start tablet:gap-6 desktop:gap-8">
-        <span className="text-black text-[15px] font-medium leading-[100%] tracking-[12.5px] uppercase">Shop now</span>
-        <img src={arrowIcon} alt="Arrow pointing to right" />
+      <button type="button" className="text-black flex justify-between items-center tablet:justify-start tablet:gap-6 desktop:gap-8 cursor-pointer hover:text-grey-500 transition-all">
+        <span className="text-[15px] font-medium leading-[100%] tracking-[12.5px] uppercase">Shop now</span>
+        <ArrowIcon />
       </button>
     </section>
   )
